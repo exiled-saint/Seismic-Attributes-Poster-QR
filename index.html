@@ -470,6 +470,38 @@ a:focus-visible, button:focus-visible{
 }
 .ref-link:hover{ opacity:1; text-decoration: underline; }
 
+.poster-download{
+  position:relative;
+  z-index:1;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: clamp(24px, 4vw, 36px) clamp(20px, 4vw, 40px);
+  text-align:center;
+
+  background: linear-gradient(155deg, var(--glass-bg), var(--glass-bg-2));
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: 0 20px 60px -30px rgba(0,0,0,0.6);
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:22px;
+}
+.poster-download-title{
+  font-size: clamp(1.2rem, 2.6vw, 1.5rem);
+  font-weight:600;
+  color: var(--text);
+}
+.poster-download-actions{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:16px;
+}
+
 .site-footer{
   margin-top: 80px;
   text-align:center;
@@ -740,6 +772,20 @@ a:focus-visible, button:focus-visible{
         </div>
       </li>
     </ol>
+  </div>
+
+  <div class="poster-download">
+    <p class="poster-download-title">Download a digital copy of our poster.</p>
+    <div class="poster-download-actions">
+      <a href="https://drive.google.com/file/d/1KAGuWDY3nStsU2EXbbvIQXOrl3jCt5Xg/view?usp=drivesdk" class="btn-primary" target="_blank" rel="noopener">
+        Download PNG
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3v10M3 8l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="https://drive.google.com/file/d/1VrNMBIFWNnC_ePt5mkTgn7v1PzyTDjXg/view?usp=drivesdk" class="btn-primary" target="_blank" rel="noopener">
+        Download PDF
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3v10M3 8l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
   </div>
 
   <footer class="site-footer">
